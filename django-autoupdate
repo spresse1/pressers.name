@@ -32,6 +32,8 @@ EOF
 
 	# Apache needs restarting
 	service apache2 restart
+	sleep 10
+
 	# Now test...
 	# Basic test - HTTP status code
 	CODE=$(curl -I -L $TESTURL 2>/dev/null | head -n 1 | cut -d$' ' -f2)
@@ -43,3 +45,15 @@ EOF
 fi
 
 ./buildenv.sh "$TARGET" "$SETTINGS"
+
+# Apache needs restarting
+service apache2 restart
+
+sleep 10
+
+CODE=$(curl -I -L $PRODURL 2>/dev/null | head -n 1 | cut -d$' ' -f2)
+if [ "$CODE" != 200 ]
+then
+	echo "**** WARNING ****"
+	echo "Test website passed valdation, but production did not."
+fi
