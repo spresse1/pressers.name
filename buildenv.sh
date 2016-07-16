@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -xe
+set -e
 
 # Gather inputs
 GITREPO=$(readlink -e $(dirname $0)) # The repo base so we can pull files as needed
@@ -11,10 +11,10 @@ DEST_EXISTS=$(test -e "$DESTINATION"; echo $?)
 # of out-of-sync settings for test & deploy envronments
 
 # Install prerequisites
-apt-get install -y virtualenv build-essential python-dev python-setuptools
+apt-get install -qq -y virtualenv build-essential python-dev python-setuptools
 
 # Pillow deps
-apt-get install -y libtiff5-dev libjpeg62-turbo-dev zlib1g-dev \
+apt-get install -qq -y libtiff5-dev libjpeg62-turbo-dev zlib1g-dev \
 	libfreetype6-dev liblcms2-dev libwebp-dev tcl8.5-dev tk8.5-dev \
 	python-tk libmysqlclient-dev
 
@@ -22,10 +22,10 @@ apt-get install -y libtiff5-dev libjpeg62-turbo-dev zlib1g-dev \
 mkdir -p "$DESTINATION"
 cd "$DESTINATION"
 
-virtualenv .
+virtualenv -q .
 . bin/activate
 
-pip install --upgrade -r "$GITREPO"/requirements.txt
+pip install -q --upgrade -r "$GITREPO"/requirements.txt
 
 # Add the django shell, if not there already
 if [ ! -e "$DESTINATION"/manage.py ]
@@ -34,14 +34,14 @@ then
 fi
 
 # And copy in the static data
-rsync -avz "$GITREPO/"payload/* "$DESTINATION"
+rsync -qavz "$GITREPO/"payload/* "$DESTINATION"
 
 if [ $DEST_EXISTS != 0 ]
 then
 	cat "$SETTINGS" >> ./pressers_name/settings.py
 fi
 
-mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p`cat ~/mysql-root-pass` mysql
+mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p`cat ~/mysql-root-pass` mysql | grep -v "Warning: Unable to load"
 
-yes | ./manage.py migrate --fake-initial
-yes "yes" | ./manage.py collectstatic
+yes | ./manage.py migrate -v 0 --fake-initial
+yes "yes" | ./manage.py -v 0 collectstatic

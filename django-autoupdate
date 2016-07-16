@@ -4,7 +4,7 @@ CONFFILE="${1:-/etc/django-autoupdate/django-autoupdate.conf}"
 
 source "$CONFFILE"
 
-set -xe
+set -e
 
 pushd .
 
@@ -17,7 +17,7 @@ then
 fi
 
 cd "$GITREPO"
-git pull
+git pull > /dev/null
 
 if [ "$TESTTARGET" ]
 then
