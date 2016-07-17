@@ -3,16 +3,16 @@
 
 {% block meta %}
 <!-- Photo specific styles -->
-<link rel="stylesheet" type="text/css" href="/static/css/photos.css">
+<link rel="stylesheet" type="text/css" href="{% static "css/photos.css" %}">
 <!-- Fancybox -->
-<script type="text/javascript" src="/static/external/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="/static/external/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-<script type="text/javascript" src="/static/external/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
-<link rel="stylesheet" href="/static/external/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-<script type="text/javascript" src="/static/external/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-<script type="text/javascript" src="/static/external/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-<link rel="stylesheet" href="/static/external/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-<script type="text/javascript" src="/static/external/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script type="text/javascript" src="{% static "external/jquery-1.11.1.min.js" %}"></script>
+<link rel="stylesheet" href="{% static "external/fancybox/jquery.fancybox.css" %}?v=2.1.5" type="text/css" media="screen" />
+<script type="text/javascript" src="{% static "external/fancybox/jquery.fancybox.pack.js" %}?v=2.1.5"></script>
+<link rel="stylesheet" href="{% static "external/fancybox/helpers/jquery.fancybox-buttons.css" %}?v=1.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="{% static "external/fancybox/helpers/jquery.fancybox-buttons.js" %}?v=1.0.5"></script>
+<script type="text/javascript" src="{% static "external/fancybox/helpers/jquery.fancybox-media.js" %}?v=1.0.6"></script>
+<link rel="stylesheet" href="{% static "external/fancybox/helpers/jquery.fancybox-thumbs.css" %}?v=1.0.7" type="text/css" media="screen" />
+<script type="text/javascript" src="{% static "external/fancybox/helpers/jquery.fancybox-thumbs.js" %}?v=1.0.7"></script>
 {% endblock %}
 
 {% block title %}{{ object.title }}{% endblock %}

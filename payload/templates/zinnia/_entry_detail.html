@@ -1,4 +1,4 @@
-{% load tagging_tags comments i18n %}
+{% load tagging_tags comments i18n staticfiles %}
 <div id="entry-{{ object.pk }}" class="hentry{% if object.featured %} featured{% endif %}">
   <div class="entry-header">
     <h2 class="entry-title">
@@ -28,7 +28,7 @@
          rel="tag category">{{ category }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}.
     </p>
   </div>
-  <div class="entry-hr"><img src="{{ STATIC_URL }}images/hrright.png"></div>
+  <div class="entry-hr"><img src="{% static "images/hrright.png" %}"></div>
 
   <div class="entry-body">
     {% if object.image %}

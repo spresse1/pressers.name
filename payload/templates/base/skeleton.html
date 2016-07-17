@@ -1,4 +1,4 @@
-{% load zinnia i18n %}
+{% load zinnia i18n staticfiles %}
 {% get_tags as entry_tags %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
@@ -8,16 +8,16 @@
     <meta http-equiv="cache-control" content="public" />
     <meta name="robots" content="follow, all" />
     <meta name="language" content="{{ LANGUAGE_CODE }}" />
-    <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{% block meta-description %}{% endblock %}" />
     <meta name="keywords" content="{% block meta-keywords %}{{ entry_tags|join:", "}}{% endblock %}" />
     {% block meta %}{% endblock %}
     <link rel="pingback" href="/xmlrpc/" />
-    <link rel="shortcut icon" href="img/favicon.ico" />
-    <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}css/base.css" />
-    <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}css/cssmenu.css" />
-    <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}css/menustyling.css" />
-    <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}css/blog.css" />
+    <!--<link rel="shortcut icon" href="{% static "zinnia/img/favicon.ico" %}" />-->
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "css/base.css" %}" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "css/cssmenu.css" %}" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "css/menustyling.css" %}" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "css/blog.css" %}" />
     {% block link %}{% endblock %}
     {% block script %}{% endblock %}
     <script type="text/javascript">
@@ -37,13 +37,12 @@
   </head>
     <body class="{% block body-class %}{% endblock %}">
         <div id="leftbar">
-            <img src="/static/images/circuitry.png" />
+            <img src="{% static "images/circuitry.png" %}" />
         </div>
         <div id="contentwrapper">
             <div id="header">
                 <div id="titleimagediv"><img id="titleimage" 
-                src="{{ STATIC_URL }}images/titlebar.png" 
-                alt="the electronic Press" /></div>
+                src="{% static "images/titlebar.png" %}" alt="the electronic Press" /></div>
                 <div id="twotraces">
                     The personal site of S. Presser - Technology, projects, classes and life
                     <div id="twotracesright">&nbsp;</div>
@@ -67,7 +66,7 @@
                 </div>
                 <div id="content">
                     <div id="contentborder">
-                        <img src="{{ STATIC_URL }}images/border-hatching-clear.png" />
+                        <img src="{% static "images/border-hatching-clear.png" %}" />
                     </div>
                     <div id="innercontent">
                         {% block content %}{% endblock %}

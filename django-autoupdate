@@ -4,7 +4,7 @@ CONFFILE="${1:-/etc/django-autoupdate/django-autoupdate.conf}"
 
 source "$CONFFILE"
 
-set -e
+set -xe
 
 pushd .
 
@@ -17,7 +17,7 @@ then
 fi
 
 cd "$GITREPO"
-git pull > /dev/null
+git pull
 
 if [ "$TESTTARGET" ]
 then
@@ -42,6 +42,7 @@ EOF
 		echo "Test instance returned HTTP error! ($CODE)"
 		exit 2
 	fi
+	echo "Update of test site succeeded"
 fi
 
 ./buildenv.sh "$TARGET" "$SETTINGS"
@@ -56,4 +57,6 @@ if [ "$CODE" != 200 ]
 then
 	echo "**** WARNING ****"
 	echo "Test website passed valdation, but production did not."
+	exit 2
 fi
+echo "Update succeeded"
