@@ -1,5 +1,4 @@
-{% load zinnia i18n %}
-{% load url from future %}
+{% load zinnia i18n staticfiles %}
 {% get_tags as entry_tags %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}" version="-//W3C//DTD XHTML 1.1//EN" xmlns="http://www.w3.org/1999/xhtml">
@@ -29,12 +28,12 @@
       <div id="header">
         <ul class="top-navigation">
           <li>
-            <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}" class="sitemap">
+            <a href="{% url 'zinnia:sitemap' %}" title="{% trans "Sitemap" %}" class="sitemap">
               {% trans "Sitemap" %}
             </a>
           </li>
           <li>
-            <a href="{% url 'zinnia_entry_latest_feed' %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds">
+            <a href="{% url 'zinnia:entry_feed' %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds">
               {% trans "RSS Feed" %}
             </a>
           </li>
@@ -61,7 +60,7 @@
               </a>
             </li>
             <li>
-              <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}">
+              <a href="{% url 'zinnia:sitemap' %}" title="{% trans "Sitemap" %}">
                 {% trans "Sitemap" %}
               </a>
             </li>
