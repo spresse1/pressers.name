@@ -41,7 +41,8 @@ then
 	cat "$SETTINGS" >> ./pressers_name/settings.py
 fi
 
-mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p`cat ~/mysql-root-pass` mysql | grep -v "Warning: Unable to load"
+# Do not fail if timezone info fails to load
+mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p`cat ~/mysql-root-pass` mysql | grep -v "Warning: Unable to load" || :
 
 yes | ./manage.py migrate -v 0 --fake-initial
-yes "yes" | ./manage.py -v 0 collectstatic
+yes "yes" | ./manage.py collectstatic

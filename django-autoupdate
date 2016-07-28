@@ -4,7 +4,7 @@ CONFFILE="${1:-/etc/django-autoupdate/django-autoupdate.conf}"
 
 source "$CONFFILE"
 
-set -xe
+set -e
 
 pushd .
 
