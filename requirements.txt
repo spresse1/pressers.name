@@ -1,4 +1,4 @@
-Django<1.10
+Django
 django-photologue
 django-blog-zinnia
 MySQL-Python

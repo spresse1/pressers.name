@@ -1,10 +1,10 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = [
     # Examples:
     # url(r'^$', 'pressers_name.views.home', name='home'),
     # url(r'^pressers_name/', include('pressers_name.foo.urls')),
@@ -20,4 +20,4 @@ urlpatterns = patterns('',
     url(r'^', include('zinnia.urls')),
     #url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^comments/', include('django_comments.urls')),
-)
+]
