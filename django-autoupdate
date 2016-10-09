@@ -28,7 +28,20 @@ create database $TESTDB;
 EOF
 	mysql -u $DB_USER -p$DB_PASS $TESTDB < /tmp/db_backup.sql
 
+	rm -rf "$TESTTARGET".orig
+	cp -r "$TESTTARGET" "$TESTTARGET".orig
 	./buildenv.sh "$TESTTARGET" "$TESTSETTINGS"
+
+	# Check if anything changed
+	if [ -z "$(diff -rq -x '*.pyc' -x settings.py "$TESTTARGET" "$TESTTARGET".orig )" ]
+	then
+		rm -rf "$TESTTARGET".orig
+		echo "No changes; exiting"
+		exit 0
+	fi
+
+	echo "Changes detected; continuing tests"
+	rm -rf "$TESTTARGET".orig
 
 	# Apache needs restarting
 	service apache2 restart
