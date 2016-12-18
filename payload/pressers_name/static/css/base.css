@@ -28,6 +28,8 @@ body {
     background-color: #FFF;
 }
 
+
+
 #header {
     background-image: url('/static/images/zerosones.png');
     height: 145px;
@@ -89,10 +91,11 @@ body {
     background-image: url('/static/images/onetrace.png');
     background-position: center top;
     background-repeat: repeat-x;
-    height: 29px;
     display: inline-block;
     width: 100%;
     vertical-align: top;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #onetraceleft {
@@ -100,27 +103,23 @@ body {
     background-position: left top;
     background-repeat: no-repeat;
     min-height: 41px;
-    min-width: 30px;
-    height:41px;
-    width: 30px;
+    width: 160px;
     display: inline-block;
+    float: left;
 }
 
 #breadcrumbs {
     background-image: url('/static/images/breadcrumbs-bg.png');
-    display: inline-block;
+    background-position: left bottom;
     background-repeat: no-repeat;
-    min-height: 29px;
-    height: 29px; 
-    margin-top: 0px;
-    position: relative;
-    left: 125px;
-    max-width: 100%;
+    min-height: 45px;
+    padding-left:25px;
+    float: left;
+    max-height: 1em;
     overflow: hidden;
-}
-
-#breadcrumbs ul {
-    margin: 0px;
+    float: inherit;
+    display: inline-block;
+    width: 1000%;
 }
 
 /* Make breadcrumbs appear in a row */
@@ -147,7 +146,6 @@ body {
 }
 
 #content {
-    margin-top: 10px;
     margin-left: 200px;
     min-height: 100%;
     height: 100%;
@@ -169,7 +167,6 @@ body {
 
 #sidebar {
     width: 175px;
-    margin-top: 12px;
     padding-right: 14px;
     padding-left: 10px;
     text-align: top;
@@ -260,8 +257,47 @@ p.notice P a:visited,
 
 pre {
     overflow-x: scroll;
+    width: 100%;
+    white-space: pre-wrap;
 }
 
 img {
     max-width: 100%;
 }
+
+/* overrides for mobile screens */
+@media screen and (max-width : 480px) {
+    #sidebar {
+        float: none;
+        display: table-footer-group;
+    }
+
+    #bodywrapper {
+        display: table;
+    }
+
+    #content {
+        margin-left: 0px;
+        display: table-header-group;
+    }
+
+    #contentwrapper {
+        width:100%;
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    #twotraces {
+        color: rgba(0,0,0,0);
+    }
+
+    #breadcrumbs {
+        left: 0px;
+        display: none;
+    }
+
+    #onetraceleft {
+        width:31px;
+    }
+}
+
