@@ -17,10 +17,6 @@ This file contains blog-specific css styles
     text-decoration: none;
 }
 
-.entry-info {
-    padding-left: 2em;
-}
-
 .entry-info,
 .entry-info a,
 .entry-info a:visited,
@@ -45,7 +41,7 @@ h2.entry-title {
     margin-top: 0.55em;
 }
 
-p.entry-info {
+p.entry-info, p.entry-last-update {
     margin-top: 0px;
     font-size: 75%;
     margin-bottom: 0px;
