@@ -68,3 +68,22 @@ ul.breadcrumbs li {
 ul.breadcrumbs li:first-child {
     list-style-image: none;
 }
+
+ul.paginator {
+    height: inital;
+}
+
+ul.paginator {
+    overflow:hidden;
+}
+
+.paginator li {
+        float:left;    /* this creates the side-by-side array of top-level button */
+        position:relative;    /* create local positioning contexts for each button */
+        margin:0;
+    list-style-type: none;
+    margin-right: 0.5em;
+    background-color: #e6e3da;
+    padding: 0.25em;
+}
+
