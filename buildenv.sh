@@ -10,7 +10,7 @@ SETTINGS=$(readlink -e ${2:-$GITREPO/settings-prod})
 # of out-of-sync settings for test & deploy envronments
 
 # Install prerequisites
-apt-get install -qq -y virtualenv build-essential python-dev python-setuptools
+apt-get install -qq -y python3-venv build-essential python3-dev python-setuptools
 
 # Pillow deps
 apt-get install -qq -y libtiff5-dev libjpeg62-turbo-dev zlib1g-dev \
@@ -26,7 +26,8 @@ mkdir -p "$DESTINATION"
 # Change to destination
 cd "$DESTINATION"
 
-virtualenv -q .
+#virtualenv -q .
+python3 -m venv .
 . bin/activate
 
 pip install -q --upgrade -r "$GITREPO"/requirements.txt
@@ -42,5 +43,5 @@ cat "$SETTINGS" >> ./pressers_name/settings.py
 # Do not fail if timezone info fails to load
 mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p`cat ~/mysql-root-pass` mysql | grep -v "Warning: Unable to load" || :
 
-yes | ./manage.py migrate -v 0 --fake-initial
-yes "yes" | ./manage.py collectstatic
+yes | python3 manage.py migrate -v 0 --fake-initial
+yes "yes" | python3 manage.py collectstatic
