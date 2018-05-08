@@ -39,6 +39,9 @@ rsync -qavz "$GITREPO/"payload/* "$DESTINATION"
 
 cat "$SETTINGS" >> ./pressers_name/settings.py
 
+# Disable debug
+sed -i 's/DEBUG = True/DEBUG = False/' ./pressers_name/settings.py
+
 # Do not fail if timezone info fails to load
 mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p`cat ~/mysql-root-pass` mysql | grep -v "Warning: Unable to load" || :
 
