@@ -87,3 +87,10 @@ ul.paginator {
     padding: 0.25em;
 }
 
+.entry-image {
+    float: left;
+}
+
+.entry-image img {
+    max-width: 200px;
+}
