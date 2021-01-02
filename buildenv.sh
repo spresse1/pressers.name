@@ -28,6 +28,10 @@ cd "$DESTINATION"
 
 #virtualenv -q .
 python3 -m venv .
+
+PYPATH=$(ls -d lib/python* | sort | tail -n 1)
+ln -s "$(basename $PYPATH)" "lib/python"
+
 . bin/activate
 
 pip install -q --upgrade -r "$GITREPO"/requirements.txt
