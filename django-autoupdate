@@ -33,7 +33,7 @@ EOF
 	./buildenv.sh "$TESTTARGET" "$TESTSETTINGS"
 
 	# Check if anything changed
-	if [ -z "$(diff -rq -x '*.pyc' -x settings.py "$TESTTARGET" "$TESTTARGET".orig )" ]
+	if [ -z "$(diff --no-dereference -rq -x '*.pyc' -x settings.py "$TESTTARGET" "$TESTTARGET".orig )" ]
 	then
 		rm -rf "$TESTTARGET".orig
 		echo "No changes; exiting"
