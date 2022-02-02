@@ -1,4 +1,5 @@
 from django.conf.urls import include, url
+from django.views.generic import RedirectView
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -21,4 +22,5 @@ urlpatterns = [
     #url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^comments/', include('django_comments.urls')),
     url(r'^contact/', include('pressers_name.contact.urls')),
+    url(r'^enigma2022/.*$', RedirectView.as_view(url='https://pressers.name/2022/02/01/enigma-2022/', permanent=False), name='enigma2022')
 ]
