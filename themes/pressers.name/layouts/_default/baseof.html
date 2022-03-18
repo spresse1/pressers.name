@@ -9,6 +9,7 @@
             {{- partial "header.html" . -}}
             <div id="bodywrapper">
                 <div id="sidebar">
+                    {{- block "sidebar" . }}{{- end }}
                 </div>
                 <div id="content">
                     <div id="contentborder"></div>
@@ -21,9 +22,7 @@
                     </div>
                 </div>
             </div>
-            <footer>
-                {{- partial "footer.html" . -}}
-            </footer>
+            {{- partial "footer.html" . -}}
         </div>
     </body>
 </html>

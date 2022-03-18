@@ -46,12 +46,14 @@ body {
 }
 
 #titleimagediv {
+    max-width: 100%;
     width: 484px;
     height: 83px;
     padding-top: 23px;
     background-image: url('/static/images/titlebar.png');
     background-position: bottom;
     background-repeat: no-repeat;
+    background-size: contain;
     float: right;
 }
 
@@ -163,7 +165,7 @@ body {
 
 #contentborder {
     width: 20px;
-    height: 80px;
+    height: 73px;
     background-image: url('/static/images/border-hatching-clear.png');
     vertical-align: top;
     float: left;
@@ -256,6 +258,8 @@ p.notice P a:visited,
     width: 100%;
     vertical-align: top;
     background-color: #e7ecf0;
+    height: 100%;
+    align: bottom;
 }
 
 #onetracebottom a,
