@@ -163,6 +163,8 @@ body {
 
 #contentborder {
     width: 20px;
+    height: 80px;
+    background-image: url('/static/images/border-hatching-clear.png');
     vertical-align: top;
     float: left;
 }

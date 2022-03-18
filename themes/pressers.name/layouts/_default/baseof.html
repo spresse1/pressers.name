@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ .Site.Language.Lang }}">
     {{- partial "head.html" . -}}
     <body>
         <div id="skip"><a href="#content">Skip to Main Content</a></div>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        {{- block "main" . }}{{- end }}
+        <div id="leftbar">
         </div>
-        {{- partial "footer.html" . -}}
+        <div id="contentwrapper">
+            {{- partial "header.html" . -}}
+            <div id="bodywrapper">
+                <div id="sidebar">
+                </div>
+                <div id="content">
+                    <div id="contentborder"></div>
+                    <div id="innercontent">
+                        <div class="hentry">
+                            <main>
+                                {{- block "main" . }}{{- end }}
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                {{- partial "footer.html" . -}}
+            </footer>
+        </div>
     </body>
 </html>
