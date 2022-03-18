@@ -1,0 +1,16 @@
+
+<head>
+    <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="public" />
+    <meta name="robots" content="follow, all" />
+    <meta name="language" content="{{ .Site.Language.Lang }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{% block meta-description %}{% endblock %}" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="/static/css/base.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="/static/css/cssmenu.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="/static/css/menustyling.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="/static/css/blog.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/static/css/print.css" />
+</head>
