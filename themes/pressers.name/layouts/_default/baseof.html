@@ -2,6 +2,7 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
+        <div id="skip"><a href="#content">Skip to Main Content</a></div>
         {{- partial "header.html" . -}}
         <div id="content">
         {{- block "main" . }}{{- end }}
