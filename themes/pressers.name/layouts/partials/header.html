@@ -9,7 +9,8 @@
             <div class="menu" id="topmenu">
                 <nav>
                     <ul class="top-navigation">
-                        <li><a href="/blog" title="Blog" rel="home">Home/Blog</a>
+                        <li><a href="/" title="Home" rel="home">Home</a></li>
+                        <li><a href="/publications" title="Publications/Appearances">Publications/Appearances</a></li>
                         <li><a href="http://github.com/spresse1">GitHub</a></li>
                         <li><a href="/contact">Contact</a></li>
                     </ul>
@@ -19,7 +20,7 @@
                 <div id="onetraceleft"></div>
                 <div id="breadcrumbs" class="breadcrumbs">
                     <nav>
-                        {{- partial "breadcrumbs.html" -}}
+                        {{- partial "breadcrumbs.html" . -}}
                     </nav>
                 </div>
             </div>

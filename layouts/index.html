@@ -16,31 +16,17 @@
 {{ end }}
 
 {{ define "main" }}
-<span class="overview">Overview</span>
-<h1 class="title">{{ .Title }}</h1>
-<div class="content">
-  {{ .Content }}
-</div>
+  {{- $paginator := .Paginate (.Site.GetPage "blog").Pages }}
+  {{ partial "pagination.html" . }}
 
-{{ range (.Site.GetPage "blog").Pages }}
-{{ .Render "summary" }}
+  {{ range .Paginator.Pages }}
+    {{ .Render "summary" }}
+  {{ end }}
+
+  {{ partial "pagination.html" . }}
 {{ end }}
 
-{{ if .Site.Params.homepage_image }}
-<div class="strip">
-  <div class="container pt-4 pb-4">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-10">
-        <div class="terminal">
-          <img src="{{ .Site.Params.homepage_image | relURL}}" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{{ end }}
-
-{{ end }}
-
-{{ define "footer_js" }}
+{{ define "sidebar" }}
+{{ partial "categories.html" . }}
+{{ partial "recentposts.html" . }}
 {{ end }}

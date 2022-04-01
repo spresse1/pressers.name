@@ -87,6 +87,24 @@ ul.paginator {
     padding: 0.25em;
 }
 
+.paginator li.page-link-current {
+    background-color: #7099b3;
+}
+
+#page-link-current {
+    color: #d5e5ef !important;
+}
+
+div.pagination-container {
+    text-align: center;
+}
+
+.paginator {
+    justify-content: center;
+    display: flex;
+    padding-left: 0;
+}
+
 .entry-image {
     float: left;
 }

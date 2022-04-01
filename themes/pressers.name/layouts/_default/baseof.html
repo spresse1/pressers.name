@@ -1,3 +1,4 @@
+{{- $useSidebar := true }}
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
     {{- partial "head.html" . -}}
@@ -8,19 +9,19 @@
         <div id="contentwrapper">
             {{- partial "header.html" . -}}
             <div id="bodywrapper">
-                <div id="sidebar">
-                    {{- block "sidebar" . }}{{- end }}
-                </div>
                 <div id="content">
                     <div id="contentborder"></div>
                     <div id="innercontent">
-                        <div class="hentry">
-                            <main>
-                                {{- block "main" . }}{{- end }}
-                            </main>
-                        </div>
+                        <main>
+                            {{- block "main" . }}{{- end }}
+                        </main>
                     </div>
                 </div>
+                {{ if $useSidebar }}
+                <div id="sidebar">
+                    {{- block "sidebar" . }}{{- end }}
+                </div>
+                {{ end }}
             </div>
             {{- partial "footer.html" . -}}
         </div>

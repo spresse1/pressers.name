@@ -1,0 +1,11 @@
+<div class="widget">
+    <nav>
+        <h1>Categories</h1>
+        <ul class="categories">
+        {{range sort (site.GetPage "taxonomyTerm" "categories").Pages "Title" }}
+        <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+        {{end}}
+        </ul>
+    </nav>
+</div>
+<div class="sidebarbender"></div>
