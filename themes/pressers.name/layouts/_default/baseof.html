@@ -1,4 +1,3 @@
-{{- $useSidebar := true }}
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
     {{- partial "head.html" . -}}
@@ -17,11 +16,9 @@
                         </main>
                     </div>
                 </div>
-                {{ if $useSidebar }}
                 <div id="sidebar">
                     {{- block "sidebar" . }}{{- end }}
                 </div>
-                {{ end }}
             </div>
             {{- partial "footer.html" . -}}
         </div>
