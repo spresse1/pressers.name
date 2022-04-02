@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 {{ if .Page.Summary }}    <meta name="description" content="{{ .Page.Summary }}" />{{ end }}
     <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", "}}{{ end }}{{ if and .Params.Keywords .Params.Tags }}{{print ", "}}{{end}}{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for pressers.name" href="/index.xml" />
     <link rel="stylesheet" type="text/css" media="screen, projection" href="/static/css/base.css" />
     <link rel="stylesheet" type="text/css" media="screen, projection" href="/static/css/cssmenu.css" />
     <link rel="stylesheet" type="text/css" media="screen, projection" href="/static/css/menustyling.css" />
