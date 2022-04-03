@@ -21,14 +21,6 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
-      - name: list files
-        run: ls -Ra
-
-      - name: Force submodules
-        run: |
-          git submodule update
-          git submodule update --init --recursive
-
       - name: Build
         run: hugo --minify
 
