@@ -1,0 +1,114 @@
+/*
+This file contains blog-specific css styles
+*/
+
+.hentry {
+    background: #e6e3da;
+    margin: 4px;
+    padding: 1em;
+    padding-top: 0.15em;
+    color: #616161;
+}
+
+.entry-title,
+.entry-title a,
+.entry-title a:visited {
+    color: #596b88;
+    text-decoration: none;
+}
+
+.entry-info,
+.entry-info a,
+.entry-info a:visited,
+.entry-body,
+.entry-body a,
+.entry-body a:visited {
+    color: #616161;
+}
+
+.entry-footer {
+    color: #484848;
+    font-size: 105%;
+}
+
+.entry-footer a,
+.entry-footer a:visited {
+    color: #004f81;
+}
+
+h2.entry-title {
+    margin-bottom: 0.25em;
+    margin-top: 0.55em;
+}
+
+p.entry-info, p.entry-last-update {
+    margin-top: 0px;
+    font-size: 75%;
+    margin-bottom: 0px;
+}
+
+.entry-footer p {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+div.entry-hr {
+    background-image: url('/static/images/hrstripe.png');
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    text-align: right;
+    height: 14px;
+}
+
+ul.breadcrumbs li {
+    margin-right: 1.3em;
+    list-style-image: url('/static/images/sidebarbullet.png');
+}
+
+ul.breadcrumbs li:first-child {
+    list-style-image: none;
+}
+
+ul.paginator {
+    height: inital;
+}
+
+ul.paginator {
+    overflow:hidden;
+}
+
+.paginator li {
+        float:left;    /* this creates the side-by-side array of top-level button */
+        position:relative;    /* create local positioning contexts for each button */
+        margin:0;
+    list-style-type: none;
+    margin-right: 0.5em;
+    background-color: #e6e3da;
+    padding: 0.25em;
+}
+
+.paginator li.page-link-current {
+    background-color: #7099b3;
+}
+
+#page-link-current {
+    color: #d5e5ef !important;
+}
+
+div.pagination-container {
+    text-align: center;
+}
+
+.paginator {
+    justify-content: center;
+    display: flex;
+    padding-left: 0;
+}
+
+.entry-image {
+    float: left;
+}
+
+.entry-image img {
+    max-width: 200px;
+}

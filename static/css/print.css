@@ -1,0 +1,25 @@
+#leftbar,
+#header,
+div.menu,
+#onetrace,
+#onetracebottom,
+#sidebar,
+div#contentborder,
+.entry-footer,
+.entry-previous,
+.entry-next,
+.entries-similar,
+#comments,
+ul.paginator,
+#yearly-archive {
+	display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+a,
+a:visited {
+    color: black;
+}
