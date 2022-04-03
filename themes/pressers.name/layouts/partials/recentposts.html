@@ -4,7 +4,7 @@
         <ul class="entries-reent">
         {{ with sort (site.GetPage "blog").Pages "PublishDate" "desc" }}
         {{ range first 5 . }}
-        <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+        <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
         {{end}}
         {{end}}
         </ul>
