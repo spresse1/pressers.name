@@ -3,7 +3,9 @@
         <header class="entry-header">
             <h1 class="entry-title"><a href="{{ .RelPermalink}}">{{ .Title }}</a></h1>
             <p class="entry-info">
+                {{ if .Date }}
                 Published on <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+                {{ end }}
                 {{ if .Params.categories}}
                 in {{ with .Params.categories}}{{ delimit . ", " }}{{ end }}
                 {{ end }}
