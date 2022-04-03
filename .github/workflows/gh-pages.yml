@@ -22,7 +22,10 @@ jobs:
           # extended: true
 
       - name: list files
-        run: ls -R
+        run: ls -Ra
+
+      - name: Force submodules
+        run: git submodule update
 
       - name: Build
         run: hugo --minify
