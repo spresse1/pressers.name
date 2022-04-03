@@ -6,7 +6,7 @@ draft: true
 
 So I just changed the hosting for my website. It's now hosted using Hugo and on GitHub pages. Long story short, if anything seems broken, [Contact me]({{< ref "/contact.md" >}})
 
-This is because Django2 support is coming to an end and Zinnia (the blogging engine I used with Django) never got support to move it to Django3.
+This is because Django2 support is coming to an end and Zinnia (the blogging engine I used with Django) never got support to move it to Django3. So after at least 6 years, it's time for a new site.
 
 Honestly, the technical of this is not that interesting.
 
