@@ -1,0 +1,9 @@
+# This file contains configuration for deploying the website manually.
+
+# Login info: these control where to log into to deploy the website.
+
+# Username to use when logging in
+USER=spresser_pressersname
+
+# host ot log into
+HOST=ssh.phx.nearlyfreespeech.net
