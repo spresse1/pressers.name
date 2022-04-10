@@ -4,6 +4,7 @@ date: 2015-01-02 15:46:00
 slug: "3d-printing-and-metalcasting"
 categories:
   - "3D Printing"
+images: [ "/static/images/clayr-pendant/PendantPicture.jpg" ]
 ---
 
 # Starting at the End
