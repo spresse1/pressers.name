@@ -289,6 +289,7 @@ img {
 
 .embedded-pdf {
     width: 100%;
+    aspect-ratio: 8.5/11;
 }
 
 @media screen and (max-width: 975px) {
