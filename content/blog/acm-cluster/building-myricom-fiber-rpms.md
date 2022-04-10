@@ -29,4 +29,4 @@ The build process here is much the same as the process documented elsewhere in t
 $ rpmbuild -ba mx.spec
 ```
 
-Finally, [inject it into the package repository as before](/2012/12/15/building-acm-cluster-part-11b-kernel-rpm-build/).
+Finally, [inject it into the package repository as before](/2012/12/16/building-acm-cluster-part-11b-kernel-rpm-build/).
