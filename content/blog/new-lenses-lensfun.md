@@ -5,6 +5,7 @@ categories:
   - Germany
   - "Life in Germany"
 slug: "getting-new-lenses-lensfun-notes"
+images: [ "/static/images/stuttgart-rose.jpg", "/static/images/dark-woods.jpg" ]
 ---
 ![Rosen sind rot... And yes, by another name, they do still smell sweet! The focus of this image is two red roses seen from the side, positioned in the right-hand third of the picture and in focus. The rest of the image is out of focus. The power half of the image is rows of distant green grape vines. The next quarter of the image is out-of-focus homes, mostly white with red-orange roofs. And the last quarter right at the top of the image is a mostly cloudy sky.](/static/images/stuttgart-rose.jpg)
 
