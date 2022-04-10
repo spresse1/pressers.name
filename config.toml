@@ -2,6 +2,7 @@ baseURL = "https://pressers.name/"
 languageCode = "en-us"
 title = "The Electronic Press"
 theme = [ "hugo-social-metadata", "hugo-cloak-email", "pressers.name" ]
+googleAnalytics = 'G-97RTTN9JGJ'
 
 [permalinks]
     'blog' = '/:year/:month/:day/:slug'
