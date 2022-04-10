@@ -1,0 +1,8 @@
+{{ if .Parent }}
+{{ with .Parent }}
+{{ partial "breadcrumbinner.html" . }}
+{{ end }}
+{{ end }}
+{{ if and .Kind ( not ( eq .Kind "home" ) ) }}
+<li><a href="{{ .RelPermalink }}">{{.Title }}</a></li>
+{{ end }}

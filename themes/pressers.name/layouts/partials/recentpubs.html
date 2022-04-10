@@ -1,0 +1,13 @@
+<div class="widget">
+    <nav>
+        <h1>Recent Publications</h1>
+        <ul class="entries-reent">
+        {{ with sort (site.GetPage "publications").Pages "PublishDate" "desc" }}
+        {{ range first 5 . }}
+        <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+        {{end}}
+        {{end}}
+        </ul>
+    </nav>
+</div>
+<div class="sidebarbender"></div>

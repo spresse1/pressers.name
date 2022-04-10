@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="hentry">
+    <article itemtype="http://schema.org/Article" itemscope id="{{ .File }}">
+        <header class="entry-header">
+            <h1 class="entry-title"><a href="{{ .RelPermalink}}">{{ .Title }}</a></h1>
+            <p class="entry-info">
+                {{ if .Date }}
+                Published on  <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+                {{ end }}
+                {{ if .Params.categories}}
+                in {{ with .Params.categories}}{{ delimit . ", " }}{{ end }}
+                {{ end }}
+            </p>
+        </header>
+        <div class="entry-body">{{ .Content }}</div>
+    </article>
+</div>
+{{ end }}
+
+{{ define "sidebar" }}
+{{ partial "recentposts.html" }}
+{{ partial "socialmedia.html" }}
+{{ partial "categories.html" }}
+{{ end }}

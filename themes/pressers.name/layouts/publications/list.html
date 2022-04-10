@@ -1,0 +1,13 @@
+{{ define "main" }}
+  {{ partial "pagination.html" . }}
+
+  <h1>Recent Publications and Appearances</h1>
+  {{ range .Paginator.Pages }}
+    {{ .Render "summary" }}
+  {{ end }}
+
+  {{ partial "pagination.html" . }}
+{{ end }}
+{{ define "sidebar" }}
+{{ partial "recentpubs.html" }}
+{{ end }}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+    {{- partial "head.html" . -}}
+    <body>
+        <div id="skip"><a href="#content">Skip to Main Content</a></div>
+        <div id="leftbar">
+        </div>
+        <div id="contentwrapper">
+            {{- partial "header.html" . -}}
+            <div id="bodywrapper">
+                <div id="content">
+                    <div id="contentborder"></div>
+                    <div id="innercontent">
+                        <main>
+                            {{- block "main" . }}{{- end }}
+                        </main>
+                    </div>
+                </div>
+                <div id="sidebar">
+                    {{- block "sidebar" . }}{{- end }}
+                </div>
+            </div>
+            {{- partial "footer.html" . -}}
+        </div>
+    </body>
+</html>

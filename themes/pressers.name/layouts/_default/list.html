@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ partial "pagination.html" . }}
+
+  {{ range .Paginator.Pages }}
+    {{ .Render "summary" }}
+  {{ end }}
+
+  {{ partial "pagination.html" . }}
+{{ end }}
+
+{{ define "sidebar" }}
+{{ partial "recentposts.html" }}
+{{ partial "socialmedia.html" }}
+{{ partial "categories.html" }}
+{{ end }}

@@ -1,0 +1,13 @@
+<div class="widget">
+    <nav>
+        <h1>Recent Posts</h1>
+        <ul class="entries-reent">
+        {{ with sort (site.GetPage "blog").Pages "PublishDate" "desc" }}
+        {{ range first 5 . }}
+        <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+        {{end}}
+        {{end}}
+        </ul>
+    </nav>
+</div>
+<div class="sidebarbender"></div>

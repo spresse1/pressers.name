@@ -1,9 +1,0 @@
-Django==2.2.27
-django-photologue
-django-blog-zinnia
-#MySQL-Python
-mysqlclient
-django-recaptcha
-django-admin-tools
-admin-tools-zinnia
-zinnia-wysiwyg-ckeditor

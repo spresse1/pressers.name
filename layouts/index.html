@@ -1,0 +1,24 @@
+{{ define "title" }}{{ .Site.Title }}{{ end}}
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-home{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "meta_tags" }}
+{{ end }}
+
+{{ define "main" }}
+  {{- $paginator := .Paginate (.Site.GetPage "blog").Pages }}
+  {{ partial "pagination.html" . }}
+
+  {{ range .Paginator.Pages }}
+    {{ .Render "summary" }}
+  {{ end }}
+
+  {{ partial "pagination.html" . }}
+{{ end }}
+
+{{ define "sidebar" }}
+{{ partial "recentposts.html" }}
+{{ partial "socialmedia.html" }}
+{{ partial "categories.html" }}
+{{ end }}

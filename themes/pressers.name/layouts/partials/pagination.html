@@ -1,0 +1,57 @@
+{{- with .Paginator }}
+
+{{- $currentPageNumber := .PageNumber }}
+
+{{ if  gt .TotalPages 1 }}
+<div class="pagination-container">
+<nav><ul class="paginator">
+{{- with .First }}
+  {{- if ne $currentPageNumber .PageNumber }}
+  <li class="page-item">
+    <a href="{{ .URL }}" aria-label="First page" class="page-link" role="button">&laquo;</a>
+  </li>
+  {{- end }}
+{{- end }}
+
+{{- with .Prev }}
+  <li class="page-item">
+    <a href="{{ .URL }}" aria-label="Previous page" class="page-link" role="button">&lt;</a>
+  </li>
+{{- end }}
+
+{{ $min := sub $currentPageNumber 2 }} <!-- Our start page number, current page - 2-->
+{{ if lt ( sub .TotalPages $min ) 5 }}
+  {{ $min = sub .TotalPages 5 }}
+{{ end }}
+{{ if lt $min 0 }} <!-- guardrail, never less than 0-->
+  {{ $min = 0 }}
+{{ end }}
+{{ range first 5 ( after $min .Pagers ) }}
+  {{ if eq .PageNumber $currentPageNumber}}
+  <li class="page-item page-link-current">
+    <a href="{{ .URL }}" aria-label="Page {{ .PageNumber }}" class="page-link" id="page-link-current" role="button">{{ .PageNumber }}</a>
+  </li>
+  {{ else }}
+    <li class="page-item">
+      <a href="{{ .URL }}" aria-label="Page {{ .PageNumber }}" class="page-link" role="button">{{ .PageNumber }}</a>
+    </li>
+  {{ end }}
+{{ end}}
+
+{{- with .Next }}
+  <li class="page-item">
+    <a href="{{ .URL }}" aria-label="Next page" class="page-link" role="button">&gt;</a>
+  </li>
+{{- end }}
+
+{{- with .Last }}
+  {{- if ne $currentPageNumber .PageNumber }}
+  <li class="page-item">
+    <a href="{{ .URL }}" aria-label="Last page" class="page-link" role="button">&raquo;</a>
+  </li>
+  {{- end }}
+{{- end }}
+</ul></nav>
+</div>
+{{ end }}
+{{- end }}
