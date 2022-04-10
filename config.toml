@@ -5,3 +5,14 @@ theme = [ "hugo-social-metadata", "hugo-cloak-email", "pressers.name" ]
 
 [permalinks]
     'blog' = '/:year/:month/:day/:slug'
+
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+  [privacy.twitter]
+    disable = false
+    enableDNT = true
+    simple = true
+  [privacy.youtube]
+    privacyEnhanced = true
