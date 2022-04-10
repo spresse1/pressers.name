@@ -14,6 +14,12 @@
     <link rel="stylesheet" type="text/css" media="screen, projection" href="/static/css/menustyling.css" />
     <link rel="stylesheet" type="text/css" media="screen, projection" href="/static/css/blog.css" />
     <link rel="stylesheet" type="text/css" media="print" href="/static/css/print.css" />
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    <!-- Hugo leaves these out, which are required -->
+    <meta name="twitter:site" content="{{ .Site.Params.twitter_handle }}" />
+    <meta name="twitter:creator" content="{{ .Site.Params.twitter_handle }}" />
+
     {{ block "meta_tags" . }}{{ end }}
     {{ template "_internal/google_analytics.html" . }}
 </head>
