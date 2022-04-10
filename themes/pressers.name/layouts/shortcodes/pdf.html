@@ -2,7 +2,7 @@
 <div class="embedded-pdf">
     <object data="{{ .Get "url" }}" type="application/pdf" class="embedded-pdf">
         <embed src="{{ .Get "url" }}" type="application/pdf">
-            <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
+            <p>This browser does not support PDFs. Please download the PDF to view it: <a href="{{ .Get "url" }}">Download PDF</a>.</p>
         </embed>
     </object>
 </div>
