@@ -1,27 +1,27 @@
 Website Sources
 ===============
 
-This repository contains much of the source of my website - at least those
-bits which it makes sense to version control.  There are no images, 
-binaries, or content in here.
+This repository contains much of the source of my website. See 
+[pressers.name](https://pressers.name) for the actual website.
 
-buildenv.sh
------------
+Deployment of the site is based on [Hugo](https://gohugo.io/). Mostly because
+bringing in the existing theme was straightforward and I like writing
+in markdown.
 
-`buildenv.sh` is a script which will (surprise of surprises) build the 
-environment required for the website's function.  It builds a django 
-virtualenv.  Run as::
+Deployment
+----------
 
-  # ./buildenv.sh TARGET_DIRECTORY SETTINGS_FILE
+Is currently manual via the `deploy.sh` script, which looks for a `.config`
+file in the current working directory.
 
-where `TARGET_DIRECTORY` is a possibly-existant target to install or 
-update and `SETTINGS_FILE` is a file to append to the generic django 
-`settings.py` (if the settings.py file is created by this script - that 
-is, if this is a new install).
+I'd like to move this to something automatic (eg: GitHub workflow or git-hook
+based) but haven't had time. I also mean to put together something to run as
+a cron job on hosted infrastructure to pull/rebuild the website. But again,
+haven't had time.
 
-TODO
-----
+Other utilities
+---------------
 
-There are plenty of possible improvements to this.  Among them:
-
-* Updating the settings.py file each time if the settings are different. 
+* `run_local_server.sh` will run the hugo development server with drafts enabled
+  so that changes may be validated before being pushed. Not that all links
+  should be relative, or it'll try to pull stuff from the live site instead.
