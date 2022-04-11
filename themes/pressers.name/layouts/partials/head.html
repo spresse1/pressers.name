@@ -1,6 +1,9 @@
 
 <head>
     <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+    <!-- Preload larger images so they're there when the renderer needs them. -->
+    <link rel="preload" as="image" href="/static/images/circuitry.png" />
+    <link rel="preload" as="image" href="/static/images/zerosones.png" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="cache-control" content="public" />
     <meta name="robots" content="follow, all" />
