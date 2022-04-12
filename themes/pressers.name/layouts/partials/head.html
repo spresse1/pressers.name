@@ -22,6 +22,7 @@
     <!-- Hugo leaves these out, which are required -->
     <meta name="twitter:site" content="{{ .Site.Params.twitter_handle }}" />
     <meta name="twitter:creator" content="{{ .Site.Params.twitter_handle }}" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 
     {{ block "meta_tags" . }}{{ end }}
     {{ template "_internal/google_analytics.html" . }}
