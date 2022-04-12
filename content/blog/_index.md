@@ -1,4 +1,4 @@
 ---
-title: "Steven Presser's blog posts"
+title: "Blog"
 description: "All my blog posts in chronological order"
 ---
