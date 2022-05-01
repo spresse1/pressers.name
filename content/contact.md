@@ -10,3 +10,4 @@ Of course, you could also reach out on:
 
 * [Twitter](https://twitter.com/spresser)
 * [LinkedIn](https://www.linkedin.com/in/steven-presser/)
+* {{<rawhtml>}}<a rel="me" href="https://mastodon.social/@spresser">Mastodon</a>{{</rawhtml>}}
