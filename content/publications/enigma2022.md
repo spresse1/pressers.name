@@ -9,4 +9,6 @@ the privacy and security of hCaptcha, a commercial captcha product.
 The slides, relevant video, FAQs and other materials are online on 
 [a dedicated page]({{< relref "/enigma2022.md" >}}).
 
-Video will be added here as soon as it is posted.
+Video of the talk is [on youtube](https://www.youtube.com/watch?v=hM16M1Rc87Q) or embedded below.
+
+{{< youtube hM16M1Rc87Q >}}
