@@ -9,7 +9,9 @@ of band data avilable via Redfish may be sufficient to perform classification on
 HPC workloads -- in real time. This has important applications in security -- 
 specifically around detecting malicious workloads and misuse of HPC systems.
 
-I presented the paper at the HPCMASPA Workshop at IEEE Cluster 2022. The slides
+I presented the paper at the 
+[HPCMASPA Workshop](https://sites.google.com/view/hpcmaspa2022) at 
+[IEEE Cluster 2022](https://clustercomp.org/2022/). The slides
 I used are avilable as 
 [odp](/static/slidesets/Presser_IEEE_Cluster_HPCMASPA.odp), 
 [pptx](/static/slidesets/Presser_IEEE_Cluster_HPCMASPA.pptx), or 
