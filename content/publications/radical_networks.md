@@ -15,5 +15,5 @@ contain the important components of the talk and important images are described
 in the video. All other images are stock/filler.
 
 {{<rawhtml>}}
-<iframe id="ls_embed_1649592976" src="https://livestream.com/accounts/686369/events/7835188/videos/164801768/player?width=640&height=360&enableInfo=true&defaultDrawer=&autoPlay=true&mute=false" style="width: 100%; aspect-ratio: 16/9;" frameborder="0" scrolling="no" allowfullscreen> </iframe>
+<iframe id="ls_embed_1649592976" src="https://livestream.com/accounts/686369/events/7835188/videos/164801768/player?width=640&height=360&enableInfo=true&defaultDrawer=&autoPlay=false&mute=false" style="width: 100%; aspect-ratio: 16/9;" frameborder="0" scrolling="no" allowfullscreen> </iframe>
 {{</rawhtml>}}
