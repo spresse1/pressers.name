@@ -79,4 +79,4 @@ HID-Compliant Touch Pad:
 
 # Up next...
 
-My next post will involve rebooting to linux and actually beginning the hunt for the devices. I'll drop a link in here once that post is up.
+My next post will involve rebooting to linux and actually beginning the hunt for the devices. [On to part two! In which I fail to accomplish anything, but move things forwards anyway]({{< relref lenovo-300e-pt2-lshw-lspci-dmesg-acpi >}})
