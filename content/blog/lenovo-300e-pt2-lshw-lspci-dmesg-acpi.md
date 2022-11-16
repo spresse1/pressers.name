@@ -1,6 +1,6 @@
 ---
-title: "Lenovo 300e Gen 2: lshw, lspci, dmesg, and some initial investigation"
-date: 2022-11-07T19:00:00+02:00
+title: "Lenovo 300e Gen 2, Part 2: lshw, lspci, dmesg, and some initial investigation"
+date: 2022-11-16T13:00:00+02:00
 ---
 
 # Recap
@@ -263,7 +263,8 @@ So what's next? We'll continue with the tablet/slate mode indicator and see if w
 
 # Long outputs
 
-Full `lshw` output:
+## `lshw` output
+
 ```shell
 [steve@fedora ~]$ sudo lshw
 [sudo] password for steve: 
@@ -806,7 +807,7 @@ fedora
                 configuration: created=2022-11-04 12:56:43 filesystem=ext4 lastmountpoint=/ modified=2022-11-07 10:31:40 mount.fstype=ext4 mount.options=rw,seclabel,relatime mounted=2022-11-07 15:31:42 state=mounted
 ```
 
-lspci output:
+## `lspci` output:
 ```shell
 [steve@fedora ~]$ lspci -k
 00:00.0 Host bridge: Advanced Micro Devices, Inc. [AMD] Raven/Raven2 Root Complex
@@ -883,7 +884,7 @@ lspci output:
 	Kernel driver in use: ahci
 ```
 
-`dmesg` output:
+## `dmesg` output:
 ```shell
 [steve@fedora ~]$ sudo dmesg
 [sudo] password for steve: 
