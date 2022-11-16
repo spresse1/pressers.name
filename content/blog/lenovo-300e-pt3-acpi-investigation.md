@@ -1,11 +1,11 @@
 ---
 title: "Lenovo 300e Gen 2, Part 3: Digging in to the Laptop/slate switch and ACPI"
-date: 2022-11-19T21:00:00+02:00
+date: 2022-11-16T13:00:00+02:00
 ---
 
 # Recap
 
-[Last time we determined that simply asking Linux to identify as Windows didn't make a difference]({{< relref lenovo-300e-pt2-lshw-lspci-dmesg-acpi >}}). That's okay, it was a long shot anyway. However, we also gathered a bunch of useful general information about the system.
+Last time, [we determined that simply asking Linux to identify as Windows didn't make a difference]({{< relref "lenovo-300e-pt2-lshw-lspci-dmesg-acpi"  >}}). That's okay, it was a long shot anyway. However, we also gathered a bunch of useful general information about the system.
 
 Now we'll get started with specific tasks to determine why the laptop/slate mode switch doesn't work.
 
@@ -727,7 +727,7 @@ So the whole function, in sum:
 * Reads a byte, and 
 * Returns that
 
-To me this implies a specific structure, though I don;t currently have the edidence to back it up as solid conclusions. It implies to me that there's some table kept in memory (probably the one at `0xCE568018`) that points to where other things are loaded in memory. `M128` is the entry in that for the one that includes the laptop/slate indicator. And then at an offset of `0x7A` from the beginning of that table, there's a byte (or a bit) indicating status.
+To me this implies a specific structure, though I don't currently have the edidence to back it up as solid conclusions. It implies to me that there's some table kept in memory (probably the one at `0xCE568018`) that points to where other things are loaded in memory. `M128` is the entry in that for the one that includes the laptop/slate indicator. And then at an offset of `0x7A` from the beginning of that table, there's a byte (or a bit) indicating status.
 
 But again, no evidence os this specific configuration. If we wanted to, we could go digging through system memory and prove (or disprove) this theory. However, if the bit is actually just an indicator that the hardware is present, we might never see it change.
 
