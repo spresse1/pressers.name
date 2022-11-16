@@ -259,7 +259,7 @@ Of course not!
 
 So this strategy was a total bust. Personally, I don't find that surprising. I was working off a single, possibly-unrelated error in `dmesg` output, which probably means I was jumping to conclusions and trying something without thinking it through or investigating first. However, it was worth the effort to eliminate one possible reason devices might not be working. Honestly, you could just as easily skip everything we tried here (except the `lshw`, `lspci`, and `dmesg` data gathering!) and move on to the next step. However, this is a thing I tried, and so I'm including it here. Although it failed for this, it might work for something else and therefore is important to include in the record.
 
-So what's next? We'll continue with the tablet/slate mode indicator and see if we can find it in ACPI and determine at which point it stops being supported. Then we'll have to write or adapt software in order to fill in that support.
+So what's next? In [part 3]({{< relref lenovo-300e-pt3-acpi-investigation >}}), we'll start digging through the ACPI details of ACPI for the tablet/slate indicator.
 
 # Long outputs
 
