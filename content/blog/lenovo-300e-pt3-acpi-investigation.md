@@ -1,6 +1,6 @@
 ---
 title: "Lenovo 300e Gen 2, Part 3: Digging in to the Laptop/slate switch and ACPI"
-date: 2022-11-16T13:00:00+02:00
+date: 2022-11-20T10:00:00+02:00
 ---
 
 # Recap
