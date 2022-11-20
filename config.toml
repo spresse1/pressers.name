@@ -11,13 +11,8 @@ googleAnalytics = 'G-97RTTN9JGJ'
   [privacy.googleAnalytics]
     anonymizeIP = true
     respectDoNotTrack = true
-  [privacy.twitter]
-    disable = false
-    enableDNT = true
-    simple = true
   [privacy.youtube]
     privacyEnhanced = true
 
 [params]
   description = "Steven Presser's website - projects, writeups, talks and more"
-  twitter_handle = "@spresser"
