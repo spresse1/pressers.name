@@ -756,7 +756,7 @@ So it looks like this system has a device that matches the identifier, but no DY
 
 # Up next
 
-Next we'll take a look at the standards this device implements and figure out what driver to add support to.
+Next we'll take a look at the standards this device implements and figure out what driver to add support to. We do this in [part 4]({{< relref lenovo-300e-pt4-laptop-slate-driver-investigation >}})
 
 # Long output
 

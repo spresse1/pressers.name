@@ -1,11 +1,11 @@
 ---
 title: "Lenovo 300e Gen 2, Part 4: Laptop/slate Driver Investigation"
-date: 2022-11-16T13:00:00+02:00
+date: 2023-01-04T04:00:00+02:00
 ---
 
 # Recap
 
-In Part 3, we dug through the ACPI definition of the Laptop/slate indicator. While we don't understand absolutely everything about how it works, we're confident that the ACPI definitions look relatively normal.
+In [Part 3]({{< relref lenovo-300e-pt3-acpi-investigation >}}), we dug through the ACPI definition of the Laptop/slate indicator. While we don't understand absolutely everything about how it works, we're confident that the ACPI definitions look relatively normal.
 
 This time, let's start looking at driver integrations.
 
