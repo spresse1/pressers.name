@@ -733,7 +733,7 @@ But again, no evidence os this specific configuration. If we wanted to, we could
 
 ## Concluding `_STA`
 
-At this point, in my opinion, we've dug deep enough inot `_STA` to believe that it probably does exactly what it says: provides status on whether or not the device is present.
+At this point, in my opinion, we've dug deep enough into `_STA` to believe that it probably does exactly what it says: provides status on whether or not the device is present.
 
 It's possible that the `_STA` method could be being used to report where the lid is. However, I beleive that wouldn't be compliant with the ACPI specification, which only allows enabled, disabled, or removed. Instead, let's cross that bridge when we get to it.
 
