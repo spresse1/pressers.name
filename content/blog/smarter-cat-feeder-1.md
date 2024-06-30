@@ -95,3 +95,7 @@ We could take this apart more and take a look at the screen. However, there's li
 # Conclusion
 
 While it was certainly interesting to tear this feeder down, the real work now begins: building it back up to do more useful things! This is going to be a gut and rebuild job. Next time, we'll pick out some hardware and lay out at least the initial circuit we plan to use.
+
+Also, if you got all the way to the end, you deserve to be paid your cat tax:
+
+![A small black cat sits on a white comforter, with a pale green blanket next to her. She’s found (or made) a small hollow in the white comforter and is in it. At the moment of the picture, she is laying on her belly, with her eyes mostly closed and one front paw out forward. She looks very sleepy and comfortable.](/static/images/smarter-cat-feeder/cattax1.jpg)
